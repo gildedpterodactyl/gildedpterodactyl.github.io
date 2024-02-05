@@ -3,7 +3,7 @@ function like() {
     likeCount++;
     likeCount%=2;
     localStorage.setItem('likeCount', likeCount);
-    document.getElementById('like-counter').innerText = likeCount;
+    document.getElementById('like-btn').innerText = (likeCount)? "Liked": "Like";
 }
 function submitComment() {
     const commentInput = document.getElementById('comment-input').value;
