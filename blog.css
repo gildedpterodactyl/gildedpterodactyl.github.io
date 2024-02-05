@@ -1,0 +1,81 @@
+body {
+    background-color: #262626;
+    margin:0px;
+}
+
+.h1_text {
+    font-size: 23px;
+    text-align: center;
+    color: #d9d9d9;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+p {
+    font-size: 30px;
+    margin: 50px;
+    text-align: center;
+}
+.like-section {
+    text-align: center;
+    margin-top: 23px;
+}
+#like-btn {
+    font-family: sans-serif;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    font-size: 23px;
+    color: #d9d9d9;
+}
+#like-btn:hover {
+    font-family: sans-serif;
+    background-color: palevioletred;
+    border-color: transparent;
+    cursor: pointer;
+    font-size: 23px;
+    color: #d9d9d9;
+}
+#submit-comment {
+    font-family: sans-serif;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    font-size: 23px;
+    color: #d9d9d9;
+}
+#submit-comment:hover {
+    font-family: sans-serif;
+    background-color: palevioletred;
+    border-color: transparent;
+    cursor: pointer;
+    font-size: 23px;
+    color: #d9d9d9;
+}
+#clear-storage {
+    font-family: sans-serif;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    font-size: 23px;
+    color: #d9d9d9;
+}
+#clear-storage:hover {
+    font-family: sans-serif;
+    background-color: palevioletred;
+    border-color: transparent;
+    cursor: pointer;
+    font-size: 23px;
+    color: #d9d9d9;
+}
+
+#comment-box {
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+#comment-section {
+    width: 80%;
+    margin: 0 auto;
+}

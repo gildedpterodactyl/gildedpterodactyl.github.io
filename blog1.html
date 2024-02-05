@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A brief history of the brief history of nearly everything</title>
+        <link rel="stylesheet" href="blog.css">
+    </head>
+    <body>
+        <h1 class="h1_text">"The Brief History of Nearly Everything" by Bill Bryson is a popular science book that explores a wide range of scientific topics, covering the history of the universe, the Earth, and life on our planet. Bryson takes readers on a journey through time and space, explaining complex scientific concepts in an accessible and engaging manner.
+
+            The book delves into various scientific disciplines, including physics, chemistry, geology, biology, and astronomy, providing insights into the discoveries, personalities, and key events that have shaped our understanding of the natural world. Bryson's narrative weaves together stories of scientists, their achievements, and the challenges they faced, offering a comprehensive overview of the scientific endeavor.
+            
+            Overall, "The Brief History of Nearly Everything" is a captivating exploration of the wonders of the universe, making science accessible to a broad audience and instilling a sense of awe and curiosity about the world we live in.</p>
+
+        <div class="like-section">
+            <button id="like-btn" onclick="like()">Like</button>
+            <span id="like-counter">0</span>
+        </div>
+        <div id="comment-box">
+            <p>Leave a Comment</p>
+            <textarea id="comment-input" rows="4" cols="50" style="background-color: transparent; border: #d9d9d9 solid; color: #d9d9d9"></textarea>
+            <br>
+            <button id="submit-comment" onclick="submitComment()">Submit Comment</button>
+        </div>
+        <div id="comment-section">
+            <ul id="comments-list"></ul>
+        </div>
+        <button id="clear-storage" onclick="clearLocalStorage()">Clear Local Storage</button>
+        <script src="blog.js"></script>
+    </body>
+</html>

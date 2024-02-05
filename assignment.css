@@ -1,0 +1,673 @@
+
+.body{
+  background-color: #FAFAF9;
+  /* background-image: url("https://i.pinimg.com/originals/f1/63/11/f16311fd0c32786525f471c685bc516e.gif") */
+}
+
+/* @font-face {
+  font-family: 'satoshi-bold';
+  src: url('Satoshi_Complete/Fonts/OTF/Satoshi-Bold.otf');
+}
+
+@font-face {
+  font-family: 'satoshi-light';
+  src: url('Satoshi_Complete/Fonts/OTF/Satoshi-Light.otf');
+} */
+
+
+
+.front_text{
+  font-size: 130px;
+  font-weight: 900;
+  font-family: sans-serif;
+  color: #4D4D4D;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  float: center;
+}
+
+.front_subtext{
+  font-size: 20px;
+  font-weight: 100;
+  font-family: sans-serif;
+  color: #4D4D4D;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  float: center;
+}
+
+.circle {
+  height: 900px;
+  width: 900px;
+  background: linear-gradient(to bottom, #ddddd5, transparent);
+  border-radius: 50%;
+}
+
+
+
+.format{
+  color: beige;
+  font-size: 60px;
+  font-family: sans-serif;
+}
+
+.switch_body{
+  display: flex;
+  justify-content: right;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 56px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #d9d9d9;
+  /* background-color: aquamarine; */
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 44px;
+  width: 44px;
+  left: 6px;
+  bottom: 6px;
+  background-color: #f2f2f2;
+  /* background-color: aquamarine; */
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #666666;
+  /* background-color: aquamarine; */
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 2px #0E0E0C;
+  /* box-shadow: 0 0 200px aquamarine; */
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(44px);
+  -ms-transform: translateX(44px);
+  transform: translateX(44px);
+}
+
+.slider.round {
+  border-radius: 28px;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+} 
+
+.tab {
+  overflow: hidden;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  padding-top: 70px;
+}
+
+.tabcontentparent{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 30px;
+  color: #666666;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  /* background-color: blanchedalmond; */
+  color: #262626;
+  font-size: 35px;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  /* background-color: palevioletred; */
+  /* color: #262626; */
+  color: palevioletred;
+}
+
+/* Style the tab content */
+.tabcontent {
+  margin: 20px;
+  display: none;
+  padding: 0px 12px;
+  /* border: 2px solid pink; */
+  font-size: 23px;
+  color: #4D4D4D;
+  width: 70%;
+  border-top: none;
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* .pic {
+  padding-top: 30px;
+  display: flex;
+  align-items: center; 
+  text-align: center;
+}
+
+.pic img {
+  width: 300%; 
+  margin-right: 20px; 
+} */
+
+#Aboutme {
+  display: grid;
+  grid-template-areas: "stack";
+  position: relative;
+}
+
+#Aboutme > * {
+  grid-area: stack;
+  position: relative;
+}
+
+.aboutme_content {
+  z-index: 3;
+  display: flex;
+  align-items: center;
+}
+
+.aboutme_text {
+  margin-left: 20px;
+  text-align: center;
+}
+
+.aboutme_image {
+  max-width: 40%;
+  height: auto;
+}
+
+.circle.circle2 {
+  z-index: 1;
+  height: 400px;
+  width: 400px;
+  float:right;
+  transform: translateY(-100%);
+  background: linear-gradient(to top, #ddddd5, transparent);
+  border-radius: 50%;
+}
+
+.circle.circle3 {
+  z-index: 2;
+  height: 300px;
+  width: 300px;
+  float:right;
+  transform: translateY(-200%) translateX(-20%);
+  background: linear-gradient(to bottom, #ddddd5, transparent);
+  border-radius: 50%;
+}
+
+
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  padding-top: 3%;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #4D4D4D;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;                                                                   
+  background-color: inherit;
+  width: 50%;                                                                                                                                                                                                                                                                                                  
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #FAFAF9;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: -7%;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid #666666;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #666666;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid #666666;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #666666 transparent transparent;
+}
+
+.container.left.left1:hover {
+  color:transparent;
+  background: url('https://img.collegepravesh.com/2014/02/IIIT-Hyderbad.jpg') no-repeat center center/cover;
+  animation: fadeEffect 0.7s;
+}
+
+
+.container.right.right1:hover {
+  color: transparent;
+  background: url('data:image/jpeg;base64,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') no-repeat center center/cover;
+  animation: fadeEffect 0.7s;
+}
+
+.container.left.left2:hover {
+  color: transparent;
+  background: url('https://www.edustoke.com/assets/uploads-new/vagdevi-vilas-school-1493205501-1.jpg') no-repeat center center/cover;
+  animation: fadeEffect 0.7s;
+}
+
+/* ... and so on for each instance ... */
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 0px 30px 20px 30px;
+  background-color: transparent;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 900px) {
+/* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+/* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+/* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+
+/* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+
+.skills_content {
+  align-items: center;
+  float: center;
+  align-content: center;
+  align-self: center;
+}
+
+.skill_pngs {
+  /* max-height: 100px; */
+  width: 10%;
+  margin: 3%;
+}
+
+.skill_pngs:hover {
+  width: 12%;
+  margin: 2%;
+  animation: expandEffect 0.5s;
+
+}
+
+.social_buttons_container {
+  display: flex; /* Make the buttons display in a horizontal line */
+  gap: 10px; /* Adjust the space between the buttons */
+}
+
+.social_text {
+  margin-top: 5%;
+  font-size: 40px;
+  font-weight: 100;
+  font-family: sans-serif;
+  color: #666666;
+  display: flex;
+  margin-bottom: 0px;
+  justify-content: center;
+  justify-items: center;
+  float: center;
+}
+
+.socials {
+  overflow: hidden;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  justify-items: center;
+}
+
+.social_button {
+  display: inline-block;
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 30px;
+  color: #666666;
+  padding: 16px;
+  transition: 0.3s;
+}
+
+.social_button:hover {
+  color: #262626;
+  font-size: 35px;
+}
+
+#download_button {
+  background-color: transparent;
+  color: #666666;
+  padding: 20px;
+  font-size: 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.blog_button {
+  background-color: transparent;
+  color: #666666;
+  padding: 20px;
+  font-size: 23px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#download_button:hover {
+  color: #262626;
+  font-size: 35px;
+}
+
+
+.footer {
+  color: #666666;
+  font-size: 20px;
+  font-weight: 100;
+  font-family: sans-serif;
+  width: 100%;
+}
+
+/* ################################################################################################################################*/
+
+body.dark-mode{
+  background-color: #262626;
+  /* background-image: url("https://i.pinimg.com/originals/f1/63/11/f16311fd0c32786525f471c685bc516e.gif") */
+}
+
+.dark-mode .front_text{
+  font-size: 130px;
+  font-weight: 900;
+  font-family: sans-serif;
+  color: #D9D9D9;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  float: center;
+}
+
+.dark-mode .front_subtext{
+  font-size: 20px;
+  font-weight: 100;
+  font-family: sans-serif;
+  color: #D9D9D9;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  float: center;
+}
+
+.dark-mode .circle {
+  height: 900px;
+  width: 900px;
+  background: linear-gradient(to bottom, #D1D1C7, transparent);
+  border-radius: 50%;
+}
+
+.dark-mode .tab {
+  overflow: hidden;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  padding-top: 70px;
+}
+
+.dark-mode .tabcontentparent{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+/* Style the buttons that are used to open the tab content */
+.dark-mode .tab button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 30px;
+  color: #666666;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.dark-mode .tab button:hover {
+  /* background-color: blanchedalmond; */
+  color: #d9d9d9  ;
+  font-size: 35px;
+}
+
+/* Create an active/current tablink class */
+.dark-mode .tab button.active {
+  /* background-color: palevioletred; */
+  /* color: #262626; */
+  color: pink;
+}
+
+/* Style the tab content */
+.dark-mode .tabcontent {
+  display: none;
+  padding: 0px 12px;
+  /* border: 2px solid pink; */
+  font-size: 23px;
+  color: #d9d9d9;
+  width: 70%;
+  border-top: none;
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dark-mode .circle.circle2 {
+  z-index: 1;
+  height: 400px;
+  width: 400px;
+  float:right;
+  transform: translateY(-100%);
+  background: linear-gradient(to top, #ddddd5, transparent);
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.dark-mode .circle.circle3 {
+  z-index: 2;
+  height: 300px;
+  width: 300px;
+  float:right;
+  transform: translateY(-200%) translateX(-20%);
+  background: linear-gradient(to bottom, #ddddd5, transparent);
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.dark-mode .social_text {
+  margin-top: 5%;
+  font-size: 50px;
+  font-weight: 100;
+  font-family: sans-serif;
+  color: #d9d9d9;
+  display: flex;
+  margin-bottom: 0px;
+  justify-content: center;
+  justify-items: center;
+  float: center;
+}
+
+.dark-mode .social_button:hover {
+  color: #d9d9d9;
+  font-size: 35px;
+}
+
+.dark-mode #download_button {
+  background-color: transparent;
+  color: #666666;
+  padding: 20px;
+  font-size: 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dark-mode .blog_button {
+  background-color: transparent;
+  color: #666666;
+  padding: 20px;
+  font-size: 23px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dark-mode #download_button:hover {
+  color: #D9D9D9;
+  font-size: 35px;
+}
+
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes expandEffect {
+  from {width: 10%; margin: 3%;}
+  to {width: 12%; margin: 2%;}
+}
